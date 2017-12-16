@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D9695C311FE4DA280078C0BC /* ExFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D9695C2F1FE4DA280078C0BC /* ExFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9695C3A1FE4DA570078C0BC /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C391FE4DA570078C0BC /* Hashable.swift */; };
+		D9695C3A1FE4DA570078C0BC /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C391FE4DA570078C0BC /* Equatable.swift */; };
 		D9695C441FE4DAFC0078C0BC /* ExUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D9695C421FE4DAFC0078C0BC /* ExUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9695C4B1FE4DB400078C0BC /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4A1FE4DB400078C0BC /* NSObject.swift */; };
 		D9695C4D1FE4DC6D0078C0BC /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4C1FE4DC6D0078C0BC /* ReusableCell.swift */; };
@@ -33,7 +33,7 @@
 		D9695C2C1FE4DA280078C0BC /* ExFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9695C2F1FE4DA280078C0BC /* ExFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExFoundation.h; sourceTree = "<group>"; };
 		D9695C301FE4DA280078C0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9695C391FE4DA570078C0BC /* Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashable.swift; sourceTree = "<group>"; };
+		D9695C391FE4DA570078C0BC /* Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatable.swift; sourceTree = "<group>"; };
 		D9695C401FE4DAFC0078C0BC /* ExUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9695C421FE4DAFC0078C0BC /* ExUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExUIKit.h; sourceTree = "<group>"; };
 		D9695C431FE4DAFC0078C0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		D9695C381FE4DA440078C0BC /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				D9695C391FE4DA570078C0BC /* Hashable.swift */,
+				D9695C391FE4DA570078C0BC /* Equatable.swift */,
 				D9DA90A41FE4F812002FA230 /* Optional.swift */,
 				D9DA90A61FE4F99F002FA230 /* Dictionary.swift */,
 			);
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9695C4F1FE4DC9E0078C0BC /* ReusableCell+UITableView.swift in Sources */,
-				D9695C3A1FE4DA570078C0BC /* Hashable.swift in Sources */,
+				D9695C3A1FE4DA570078C0BC /* Equatable.swift in Sources */,
 				D9695C4B1FE4DB400078C0BC /* NSObject.swift in Sources */,
 				D9695C551FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift in Sources */,
 				D9DA90A71FE4F99F002FA230 /* Dictionary.swift in Sources */,

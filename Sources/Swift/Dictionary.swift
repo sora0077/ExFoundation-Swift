@@ -12,11 +12,11 @@ public extension Dictionary {
     }
 
     static func += (lhs: inout Dictionary, rhs: Dictionary) {
-        lhs = lhs + rhs
+        lhs = lhs + rhs  // swiftlint:disable:this shorthand_operator
     }
 }
 
-extension Dictionary where Value: OptionalType {
+public extension Dictionary where Value: OptionalType {
     var cleaned: [Key: Value.WrappedType] {
         return filter { _, value in value.unwrapped != nil }.mapValues { $0.unsafelyUnwrapped }
     }
