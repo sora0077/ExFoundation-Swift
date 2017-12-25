@@ -27,3 +27,12 @@ public extension Optional where Wrapped == String {
         }
     }
 }
+
+public extension OptionalType where WrappedType: Collection {
+    var isEmpty: Bool {
+        switch unwrapped {
+        case .some(let c): return c.isEmpty
+        case .none: return true
+        }
+    }
+}

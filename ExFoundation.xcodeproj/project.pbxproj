@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9327EC81FF1403F005A429C /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9327EC71FF1403F005A429C /* Bool.swift */; };
+		D9327ECA1FF1453A005A429C /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9327EC91FF1453A005A429C /* NSRange.swift */; };
 		D9695C311FE4DA280078C0BC /* ExFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D9695C2F1FE4DA280078C0BC /* ExFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9695C3A1FE4DA570078C0BC /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C391FE4DA570078C0BC /* Equatable.swift */; };
 		D9695C441FE4DAFC0078C0BC /* ExUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D9695C421FE4DAFC0078C0BC /* ExUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D9327EC71FF1403F005A429C /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
+		D9327EC91FF1453A005A429C /* NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRange.swift; sourceTree = "<group>"; };
 		D9695C2C1FE4DA280078C0BC /* ExFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9695C2F1FE4DA280078C0BC /* ExFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExFoundation.h; sourceTree = "<group>"; };
 		D9695C301FE4DA280078C0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				D9695C391FE4DA570078C0BC /* Equatable.swift */,
 				D9DA90A41FE4F812002FA230 /* Optional.swift */,
 				D9DA90A61FE4F99F002FA230 /* Dictionary.swift */,
+				D9327EC71FF1403F005A429C /* Bool.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D9695C4A1FE4DB400078C0BC /* NSObject.swift */,
+				D9327EC91FF1453A005A429C /* NSRange.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9695C4F1FE4DC9E0078C0BC /* ReusableCell+UITableView.swift in Sources */,
+				D9327ECA1FF1453A005A429C /* NSRange.swift in Sources */,
+				D9327EC81FF1403F005A429C /* Bool.swift in Sources */,
 				D9695C3A1FE4DA570078C0BC /* Equatable.swift in Sources */,
 				D9695C4B1FE4DB400078C0BC /* NSObject.swift in Sources */,
 				D9695C551FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift in Sources */,

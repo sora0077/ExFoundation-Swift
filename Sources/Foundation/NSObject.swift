@@ -9,8 +9,8 @@
 import Foundation
 
 extension NSObjectProtocol {
-    public func apply(_ block: (Self) -> Void) -> Self {
-        block(self)
+    public func apply(_ block: (Self) throws -> Void) rethrows -> Self {
+        try block(self)
         return self
     }
 }
