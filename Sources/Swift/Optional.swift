@@ -6,19 +6,6 @@
 //  Copyright © 2017年 林達也. All rights reserved.
 //
 
-// for generics constraint
-public protocol OptionalType {
-    associatedtype WrappedType
-
-    var unsafelyUnwrapped: WrappedType { get }
-    var unwrapped: WrappedType? { get }
-}
-
-extension Optional: OptionalType {
-    public typealias WrappedType = Wrapped
-    public var unwrapped: Wrapped? { return self }
-}
-
 public extension Optional where Wrapped == String {
     var isEmpty: Bool {
         switch self {
@@ -28,9 +15,9 @@ public extension Optional where Wrapped == String {
     }
 }
 
-public extension OptionalType where WrappedType: Collection {
+public extension Optional where Wrapped: Collection {
     var isEmpty: Bool {
-        switch unwrapped {
+        switch self {
         case .some(let c): return c.isEmpty
         case .none: return true
         }

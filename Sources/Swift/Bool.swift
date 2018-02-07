@@ -9,8 +9,9 @@
 // MARK: - all
 public func all<S: Sequence>(_ seq: S, _ transform: (S.Element) throws -> Bool) rethrows -> Bool {
     for s in seq {
-        let ret = try transform(s)
-        if !ret { return false }
+        if try !transform(s) {
+            return false
+        }
     }
     return true
 }

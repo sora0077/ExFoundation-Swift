@@ -31,29 +31,24 @@ public extension UICollectionView {
 public extension UICollectionView {
     func register(_ types: (UICollectionViewCell & ReusableCell).Type...) {
         for type in types {
-            register(type, forCellWithReuseIdentifier: type.cellIdentifier)
+            if let type = type as? ReusableCellXib.Type {
+                register(UINib(nibName: type.nibName, bundle: type.nibBundle),
+                         forCellWithReuseIdentifier: type.cellIdentifier)
+            } else {
+                register(type, forCellWithReuseIdentifier: type.cellIdentifier)
+            }
         }
     }
 
     func register(_ types: (UICollectionReusableView & ReusableSupplementaryView).Type...) {
         for type in types {
-            register(type, forSupplementaryViewOfKind: type.elementKind, withReuseIdentifier: type.cellIdentifier)
-        }
-    }
-
-    // MARK: -
-    func register(_ types: (UITableViewCell & ReusableCellXib).Type...) {
-        for type in types {
-            register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                     forCellWithReuseIdentifier: type.cellIdentifier)
-        }
-    }
-
-    func register(_ types: (UITableViewHeaderFooterView & ReusableSupplementaryViewXib).Type...) {
-        for type in types {
-            register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                     forSupplementaryViewOfKind: type.elementKind,
-                     withReuseIdentifier: type.cellIdentifier)
+            if let type = type as? ReusableSupplementaryViewXib.Type {
+                register(UINib(nibName: type.nibName, bundle: type.nibBundle),
+                         forSupplementaryViewOfKind: type.elementKind,
+                         withReuseIdentifier: type.cellIdentifier)
+            } else {
+                register(type, forSupplementaryViewOfKind: type.elementKind, withReuseIdentifier: type.cellIdentifier)
+            }
         }
     }
 }

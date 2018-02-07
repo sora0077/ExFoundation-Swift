@@ -23,28 +23,23 @@ public extension UITableView {
 public extension UITableView {
     func register(_ types: (UITableViewCell & ReusableCell).Type...) {
         for type in types {
-            register(type, forCellReuseIdentifier: type.cellIdentifier)
+            if let type = type as? ReusableCellXib.Type {
+                register(UINib(nibName: type.nibName, bundle: type.nibBundle),
+                         forCellReuseIdentifier: type.cellIdentifier)
+            } else {
+                register(type, forCellReuseIdentifier: type.cellIdentifier)
+            }
         }
     }
 
     func register(_ types: (UITableViewHeaderFooterView & ReusableCell).Type...) {
         for type in types {
-            register(type, forHeaderFooterViewReuseIdentifier: type.cellIdentifier)
-        }
-    }
-
-    // MARK: -
-    func register(_ types: (UITableViewCell & ReusableCellXib).Type...) {
-        for type in types {
-            register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                     forCellReuseIdentifier: type.cellIdentifier)
-        }
-    }
-
-    func register(_ types: (UITableViewHeaderFooterView & ReusableCellXib).Type...) {
-        for type in types {
-            register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                     forHeaderFooterViewReuseIdentifier: type.cellIdentifier)
+            if let type = type as? ReusableCellXib.Type {
+                register(UINib(nibName: type.nibName, bundle: type.nibBundle),
+                         forHeaderFooterViewReuseIdentifier: type.cellIdentifier)
+            } else {
+                register(type, forHeaderFooterViewReuseIdentifier: type.cellIdentifier)
+            }
         }
     }
 }
