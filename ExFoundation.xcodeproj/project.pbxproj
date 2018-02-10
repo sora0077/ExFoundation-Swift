@@ -19,6 +19,7 @@
 		D997B287202B74E1005A5104 /* ReusableCell+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4E1FE4DC9E0078C0BC /* ReusableCell+UITableView.swift */; };
 		D997B288202B74E5005A5104 /* ReusableCell+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C541FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift */; };
 		D997B289202B74E9005A5104 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997B284202B74B2005A5104 /* UIView.swift */; };
+		D9B4285D202EBE100005DA69 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4285C202EBE100005DA69 /* NSAttributedString.swift */; };
 		D9DA90A51FE4F812002FA230 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA90A41FE4F812002FA230 /* Optional.swift */; };
 		D9DA90A71FE4F99F002FA230 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA90A61FE4F99F002FA230 /* Dictionary.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		D9695C541FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableCell+UICollectionView.swift"; sourceTree = "<group>"; };
 		D997B282202B4DFE005A5104 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		D997B284202B74B2005A5104 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D9B4285C202EBE100005DA69 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
 		D9DA90A41FE4F812002FA230 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		D9DA90A61FE4F99F002FA230 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			children = (
 				D9695C4A1FE4DB400078C0BC /* NSObject.swift */,
 				D9327EC91FF1453A005A429C /* NSRange.swift */,
+				D9B4285C202EBE100005DA69 /* NSAttributedString.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				D997B283202B4DFE005A5104 /* Array.swift in Sources */,
 				D9327ECA1FF1453A005A429C /* NSRange.swift in Sources */,
 				D9327EC81FF1403F005A429C /* Bool.swift in Sources */,
+				D9B4285D202EBE100005DA69 /* NSAttributedString.swift in Sources */,
 				D9695C3A1FE4DA570078C0BC /* Equatable.swift in Sources */,
 				D9695C4B1FE4DB400078C0BC /* NSObject.swift in Sources */,
 				D9DA90A71FE4F99F002FA230 /* Dictionary.swift in Sources */,
@@ -359,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -413,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
