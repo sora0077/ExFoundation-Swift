@@ -11,12 +11,12 @@ import UIKit
 public extension UITableView {
     func dequeueReusableCell<Cell>(for indexPath: IndexPath) -> Cell where Cell: UITableViewCell & ReusableCell {
         // swiftlint:disable:next force_cast
-        return dequeueReusableCell(withIdentifier: Cell.cellIdentifier, for: indexPath) as! Cell
+        return dequeueReusableCell(withIdentifier: Cell.reusableCellIdentifier, for: indexPath) as! Cell
     }
 
     func dequeueReusableHeaderFooterView<View>() -> View? where View: UITableViewHeaderFooterView & ReusableCell {
         // swiftlint:disable:next force_cast
-        return dequeueReusableHeaderFooterView(withIdentifier: View.cellIdentifier) as! View?
+        return dequeueReusableHeaderFooterView(withIdentifier: View.reusableCellIdentifier) as! View?
     }
 }
 
@@ -25,9 +25,9 @@ public extension UITableView {
         for type in types {
             if let type = type as? ReusableCellXib.Type {
                 register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                         forCellReuseIdentifier: type.cellIdentifier)
+                         forCellReuseIdentifier: type.reusableCellIdentifier)
             } else {
-                register(type, forCellReuseIdentifier: type.cellIdentifier)
+                register(type, forCellReuseIdentifier: type.reusableCellIdentifier)
             }
         }
     }
@@ -36,9 +36,9 @@ public extension UITableView {
         for type in types {
             if let type = type as? ReusableCellXib.Type {
                 register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                         forHeaderFooterViewReuseIdentifier: type.cellIdentifier)
+                         forHeaderFooterViewReuseIdentifier: type.reusableCellIdentifier)
             } else {
-                register(type, forHeaderFooterViewReuseIdentifier: type.cellIdentifier)
+                register(type, forHeaderFooterViewReuseIdentifier: type.reusableCellIdentifier)
             }
         }
     }

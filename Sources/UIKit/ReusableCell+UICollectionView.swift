@@ -16,14 +16,14 @@ public protocol ReusableSupplementaryViewXib: ReusableCellXib, ReusableSupplemen
 
 public extension UICollectionView {
     func dequeueReusableCell<Cell>(for indexPath: IndexPath) -> Cell where Cell: UICollectionViewCell & ReusableCell {
-        return dequeueReusableCell(withReuseIdentifier: Cell.cellIdentifier,
+        return dequeueReusableCell(withReuseIdentifier: Cell.reusableCellIdentifier,
                                    for: indexPath) as! Cell  // swiftlint:disable:this force_cast
     }
 
     // swiftlint:disable:next line_length
     func dequeueReusableSupplementaryView<View>(ofKind elementKind: String, for indexPath: IndexPath) -> View where View: UICollectionReusableView & ReusableSupplementaryView {
         return dequeueReusableSupplementaryView(ofKind: elementKind,
-                                                withReuseIdentifier: View.cellIdentifier,
+                                                withReuseIdentifier: View.reusableCellIdentifier,
                                                 for: indexPath) as! View  // swiftlint:disable:this force_cast
     }
 }
@@ -33,9 +33,9 @@ public extension UICollectionView {
         for type in types {
             if let type = type as? ReusableCellXib.Type {
                 register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                         forCellWithReuseIdentifier: type.cellIdentifier)
+                         forCellWithReuseIdentifier: type.reusableCellIdentifier)
             } else {
-                register(type, forCellWithReuseIdentifier: type.cellIdentifier)
+                register(type, forCellWithReuseIdentifier: type.reusableCellIdentifier)
             }
         }
     }
@@ -45,9 +45,9 @@ public extension UICollectionView {
             if let type = type as? ReusableSupplementaryViewXib.Type {
                 register(UINib(nibName: type.nibName, bundle: type.nibBundle),
                          forSupplementaryViewOfKind: type.elementKind,
-                         withReuseIdentifier: type.cellIdentifier)
+                         withReuseIdentifier: type.reusableCellIdentifier)
             } else {
-                register(type, forSupplementaryViewOfKind: type.elementKind, withReuseIdentifier: type.cellIdentifier)
+                register(type, forSupplementaryViewOfKind: type.elementKind, withReuseIdentifier: type.reusableCellIdentifier)
             }
         }
     }

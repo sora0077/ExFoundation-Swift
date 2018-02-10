@@ -9,11 +9,11 @@
 import UIKit
 
 public protocol ReusableCell {
-    static var cellIdentifier: String { get }
+    static var reusableCellIdentifier: String { get }
 }
 
 public extension ReusableCell {
-    static var cellIdentifier: String { return String(describing: self) }
+    static var reusableCellIdentifier: String { return String(describing: self) }
 }
 
 //
@@ -24,6 +24,6 @@ public protocol ReusableCellXib: ReusableCell {
 }
 
 public extension ReusableCellXib {
-    static var nibName: String { return cellIdentifier }
+    static var nibName: String { return reusableCellIdentifier }
     static var nibBundle: Bundle? { return nil }
 }

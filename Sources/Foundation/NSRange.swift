@@ -8,6 +8,10 @@
 
 import Foundation
 
+public extension NSRange {
+    static let notFound = NSRange(location: NSNotFound, length: 0)
+}
+
 public extension String {
     func nsRange<Str: StringProtocol>(of sub: Str) -> NSRange? {
         return range(of: sub).map { NSRange($0, in: self) }
