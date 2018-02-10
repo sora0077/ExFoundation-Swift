@@ -8,9 +8,11 @@
 
 import Foundation
 #if os(macOS)
-    import AppKit
+    import class AppKit.NSFont
+    import class AppKit.NSColor
 #else
-    import UIKit
+    import class UIKit.UIFont
+    import class UIKit.UIColor
 #endif
 
 extension NSAttributedString {
@@ -121,11 +123,9 @@ extension NSAttributedString {
     public convenience init(string str: String, attributes attrs: [Attribute]) {
         self.init(string: str, attributes: Dictionary(uniqueKeysWithValues: attrs.map { ($0.key, $0.value) }))
     }
-}
 
-extension NSAttributedString {
-    public static func `init`(_ comps: [(string: String, attributes: [Attribute])]) -> NSAttributedString {
-        return comps.attributedString
+    public convenience init(_ comps: [(string: String, attributes: [Attribute])]) {
+        self.init(attributedString: comps.attributedString)
     }
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 林達也. All rights reserved.
 //
 
-public extension Optional where Wrapped == String {
+public extension Optional where Wrapped: StringProtocol {
     var isEmpty: Bool {
         switch self {
         case .some(let str): return str.isEmpty

@@ -6,6 +6,16 @@
 //  Copyright © 2017年 林達也. All rights reserved.
 //
 
+public extension Bool {
+    mutating func toggle() {
+        self = !self
+    }
+
+    func toggled() -> Bool {
+        return !self
+    }
+}
+
 // MARK: - all
 public func all<S: Sequence>(_ seq: S, _ transform: (S.Element) throws -> Bool) rethrows -> Bool {
     for s in seq {
