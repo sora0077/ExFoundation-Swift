@@ -12,6 +12,7 @@ import MapKit
 public extension MKMapView {
     func register(_ types: (MKAnnotationView & Reusable).Type...) {
         for type in types {
+            assert(!(type is ReusableNib.Type), "MKMapView does not correspond to nib registration. e.g.) \(type)")
             register(type, forAnnotationViewWithReuseIdentifier: type.reusableIdentifier)
         }
     }
