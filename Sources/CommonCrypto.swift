@@ -7,3 +7,30 @@
 //
 
 @_exported import CommonCrypto
+
+public typealias CryptoHash = (_ data: UnsafeRawPointer?, _ len: CC_LONG, _ md: UnsafeMutablePointer<UInt8>?) -> UnsafeMutablePointer<UInt8>?
+
+public extension Data {
+    static func digest(_ hash: @escaping CryptoHash, length: Int32) -> (_ input: Data) -> Data {
+        return { input in
+            var buffer = Data(count: Int(length))
+            _ = buffer.withUnsafeMutableBytes { buffer in
+                input.withUnsafeBytes {
+                    hash($0, CC_LONG(input.count), buffer)
+                }
+            }
+            return buffer
+        }
+    }
+}
+
+public extension String {
+    static func digest(_ hash: @escaping CryptoHash, length: Int32) -> (_ input: String?) -> String? {
+        return { input in
+            input?.data(using: .utf8)
+                .map(Data.digest(hash, length: length))?
+                .map { String.init(format: "%02hhx", $0) }
+                .joined()
+        }
+    }
+}

@@ -9,6 +9,8 @@
 import UIKit
 import ExFoundation
 
+let sha256 = String.digest(CC_SHA256, length: CC_SHA256_DIGEST_LENGTH)
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -16,6 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         print(all(true, false, true), CC_SHA1_DIGEST_LENGTH)
+        print(sha256("foo bar buz"))
     }
 
     override func didReceiveMemoryWarning() {
