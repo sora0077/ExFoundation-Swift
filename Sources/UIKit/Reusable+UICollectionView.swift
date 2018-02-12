@@ -1,5 +1,5 @@
 //
-//  ReusableCell+UICollectionView.swift
+//  Reusable+UICollectionView.swift
 //  ExFoundation
 //
 //  Created by 林達也 on 2017/12/16.
@@ -8,46 +8,46 @@
 
 import UIKit
 
-public protocol ReusableSupplementaryView: ReusableCell {
+public protocol ReusableSupplementaryView: Reusable {
     static var elementKind: String { get }
 }
 
-public protocol ReusableSupplementaryViewXib: ReusableCellXib, ReusableSupplementaryView {}
+public protocol ReusableSupplementaryViewNib: ReusableNib, ReusableSupplementaryView {}
 
 public extension UICollectionView {
-    func dequeueReusableCell<Cell>(for indexPath: IndexPath) -> Cell where Cell: UICollectionViewCell & ReusableCell {
-        return dequeueReusableCell(withReuseIdentifier: Cell.reusableCellIdentifier,
+    func dequeueReusableCell<Cell>(for indexPath: IndexPath) -> Cell where Cell: UICollectionViewCell & Reusable {
+        return dequeueReusableCell(withReuseIdentifier: Cell.reusableIdentifier,
                                    for: indexPath) as! Cell  // swiftlint:disable:this force_cast
     }
 
     // swiftlint:disable:next line_length
     func dequeueReusableSupplementaryView<View>(ofKind elementKind: String, for indexPath: IndexPath) -> View where View: UICollectionReusableView & ReusableSupplementaryView {
         return dequeueReusableSupplementaryView(ofKind: elementKind,
-                                                withReuseIdentifier: View.reusableCellIdentifier,
+                                                withReuseIdentifier: View.reusableIdentifier,
                                                 for: indexPath) as! View  // swiftlint:disable:this force_cast
     }
 }
 
 public extension UICollectionView {
-    func register(_ types: (UICollectionViewCell & ReusableCell).Type...) {
+    func register(_ types: (UICollectionViewCell & Reusable).Type...) {
         for type in types {
-            if let type = type as? ReusableCellXib.Type {
+            if let type = type as? ReusableNib.Type {
                 register(UINib(nibName: type.nibName, bundle: type.nibBundle),
-                         forCellWithReuseIdentifier: type.reusableCellIdentifier)
+                         forCellWithReuseIdentifier: type.reusableIdentifier)
             } else {
-                register(type, forCellWithReuseIdentifier: type.reusableCellIdentifier)
+                register(type, forCellWithReuseIdentifier: type.reusableIdentifier)
             }
         }
     }
 
     func register(_ types: (UICollectionReusableView & ReusableSupplementaryView).Type...) {
         for type in types {
-            if let type = type as? ReusableSupplementaryViewXib.Type {
+            if let type = type as? ReusableSupplementaryViewNib.Type {
                 register(UINib(nibName: type.nibName, bundle: type.nibBundle),
                          forSupplementaryViewOfKind: type.elementKind,
-                         withReuseIdentifier: type.reusableCellIdentifier)
+                         withReuseIdentifier: type.reusableIdentifier)
             } else {
-                register(type, forSupplementaryViewOfKind: type.elementKind, withReuseIdentifier: type.reusableCellIdentifier)
+                register(type, forSupplementaryViewOfKind: type.elementKind, withReuseIdentifier: type.reusableIdentifier)
             }
         }
     }

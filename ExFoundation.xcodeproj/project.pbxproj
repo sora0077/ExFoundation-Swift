@@ -25,9 +25,9 @@
 		D9695C4B1FE4DB400078C0BC /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4A1FE4DB400078C0BC /* NSObject.swift */; };
 		D9695C511FE4DF3D0078C0BC /* ExFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9695C2C1FE4DA280078C0BC /* ExFoundation.framework */; };
 		D997B283202B4DFE005A5104 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997B282202B4DFE005A5104 /* Array.swift */; };
-		D997B286202B74DE005A5104 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4C1FE4DC6D0078C0BC /* ReusableCell.swift */; };
-		D997B287202B74E1005A5104 /* ReusableCell+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4E1FE4DC9E0078C0BC /* ReusableCell+UITableView.swift */; };
-		D997B288202B74E5005A5104 /* ReusableCell+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C541FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift */; };
+		D997B286202B74DE005A5104 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4C1FE4DC6D0078C0BC /* Reusable.swift */; };
+		D997B287202B74E1005A5104 /* Reusable+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C4E1FE4DC9E0078C0BC /* Reusable+UITableView.swift */; };
+		D997B288202B74E5005A5104 /* Reusable+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9695C541FE4E6D40078C0BC /* Reusable+UICollectionView.swift */; };
 		D997B289202B74E9005A5104 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997B284202B74B2005A5104 /* UIView.swift */; };
 		D9B4285D202EBE100005DA69 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4285C202EBE100005DA69 /* NSAttributedString.swift */; };
 		D9DA90A51FE4F812002FA230 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA90A41FE4F812002FA230 /* Optional.swift */; };
@@ -94,9 +94,9 @@
 		D9695C421FE4DAFC0078C0BC /* ExUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExUIKit.h; sourceTree = "<group>"; };
 		D9695C431FE4DAFC0078C0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9695C4A1FE4DB400078C0BC /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
-		D9695C4C1FE4DC6D0078C0BC /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
-		D9695C4E1FE4DC9E0078C0BC /* ReusableCell+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableCell+UITableView.swift"; sourceTree = "<group>"; };
-		D9695C541FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableCell+UICollectionView.swift"; sourceTree = "<group>"; };
+		D9695C4C1FE4DC6D0078C0BC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		D9695C4E1FE4DC9E0078C0BC /* Reusable+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+UITableView.swift"; sourceTree = "<group>"; };
+		D9695C541FE4E6D40078C0BC /* Reusable+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+UICollectionView.swift"; sourceTree = "<group>"; };
 		D997B282202B4DFE005A5104 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		D997B284202B74B2005A5104 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D9B4285C202EBE100005DA69 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
@@ -238,9 +238,9 @@
 		D9695C491FE4DB130078C0BC /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				D9695C4C1FE4DC6D0078C0BC /* ReusableCell.swift */,
-				D9695C4E1FE4DC9E0078C0BC /* ReusableCell+UITableView.swift */,
-				D9695C541FE4E6D40078C0BC /* ReusableCell+UICollectionView.swift */,
+				D9695C4C1FE4DC6D0078C0BC /* Reusable.swift */,
+				D9695C4E1FE4DC9E0078C0BC /* Reusable+UITableView.swift */,
+				D9695C541FE4E6D40078C0BC /* Reusable+UICollectionView.swift */,
 				D997B284202B74B2005A5104 /* UIView.swift */,
 			);
 			path = UIKit;
@@ -428,9 +428,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D997B289202B74E9005A5104 /* UIView.swift in Sources */,
-				D997B288202B74E5005A5104 /* ReusableCell+UICollectionView.swift in Sources */,
-				D997B287202B74E1005A5104 /* ReusableCell+UITableView.swift in Sources */,
-				D997B286202B74DE005A5104 /* ReusableCell.swift in Sources */,
+				D997B288202B74E5005A5104 /* Reusable+UICollectionView.swift in Sources */,
+				D997B287202B74E1005A5104 /* Reusable+UITableView.swift in Sources */,
+				D997B286202B74DE005A5104 /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
