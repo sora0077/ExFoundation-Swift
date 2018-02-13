@@ -21,8 +21,8 @@ public extension UICollectionView {
     }
 
     // swiftlint:disable:next line_length
-    func dequeueReusableSupplementaryView<View>(ofKind elementKind: String, for indexPath: IndexPath) -> View where View: UICollectionReusableView & ReusableSupplementaryView {
-        return dequeueReusableSupplementaryView(ofKind: elementKind,
+    func dequeueReusableSupplementaryView<View>(for indexPath: IndexPath) -> View where View: UICollectionReusableView & ReusableSupplementaryView {
+        return dequeueReusableSupplementaryView(ofKind: View.elementKind,
                                                 withReuseIdentifier: View.reusableIdentifier,
                                                 for: indexPath) as! View  // swiftlint:disable:this force_cast
     }

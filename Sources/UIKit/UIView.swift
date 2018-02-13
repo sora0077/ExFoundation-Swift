@@ -10,7 +10,11 @@ import UIKit
 import ExFoundation
 
 public extension UIView {
-    func addSubview(_ views: UIView?...) {
+    func addSubview(_ views: [UIView?]) {
         views.compactMap().forEach(addSubview)
+    }
+
+    func addSubview(_ views: UIView?...) {
+        addSubview(views)
     }
 }

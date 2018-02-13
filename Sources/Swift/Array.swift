@@ -11,3 +11,23 @@ public extension Sequence {
         return flatMap { $0 }
     }
 }
+
+public extension Sequence where Element == Bool {
+    func all() -> Bool {
+        return ExFoundation.all(self)
+    }
+
+    func any() -> Bool {
+        return ExFoundation.any(self)
+    }
+}
+
+public extension Sequence {
+    func all(_ transform: (Element) throws -> Bool) rethrows -> Bool {
+        return try ExFoundation.all(self, transform)
+    }
+
+    func any(_ transform: (Element) throws -> Bool) rethrows -> Bool {
+        return try ExFoundation.any(self, transform)
+    }
+}

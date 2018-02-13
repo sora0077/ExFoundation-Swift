@@ -29,7 +29,7 @@ public extension String {
         return { input in
             input?.data(using: .utf8)
                 .map(Data.digest(hash, length: length))?
-                .map { String.init(format: "%02hhx", $0) }
+                .map { String(format: "%02hhx", $0) }
                 .joined()
         }
     }
