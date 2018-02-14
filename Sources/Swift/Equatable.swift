@@ -15,3 +15,9 @@ extension Equatable {
         return values.contains(self)
     }
 }
+
+extension Equatable where Self: Comparable {
+    public func contains<R: RangeExpression>(in range: R) -> Bool where R.Bound == Self {
+        return range.contains(self)
+    }
+}

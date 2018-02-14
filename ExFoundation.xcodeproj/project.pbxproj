@@ -34,6 +34,7 @@
 		D9DA90A51FE4F812002FA230 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA90A41FE4F812002FA230 /* Optional.swift */; };
 		D9DA90A71FE4F99F002FA230 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DA90A61FE4F99F002FA230 /* Dictionary.swift */; };
 		D9ECBF5520327BE200A15190 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECBF5320327BDF00A15190 /* UIColor.swift */; };
+		D9ECBF582034604300A15190 /* UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECBF562034600B00A15190 /* UILayoutPriority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		D9DA90A41FE4F812002FA230 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		D9DA90A61FE4F99F002FA230 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		D9ECBF5320327BDF00A15190 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D9ECBF562034600B00A15190 /* UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 				D961B71D2031302300F35AE8 /* Reusable+MKMapView.swift */,
 				D997B284202B74B2005A5104 /* UIView.swift */,
 				D9ECBF5320327BDF00A15190 /* UIColor.swift */,
+				D9ECBF562034600B00A15190 /* UILayoutPriority.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				D997B289202B74E9005A5104 /* UIView.swift in Sources */,
 				D9ECBF5520327BE200A15190 /* UIColor.swift in Sources */,
 				D961B71F2031307A00F35AE8 /* Reusable+MKMapView.swift in Sources */,
+				D9ECBF582034604300A15190 /* UILayoutPriority.swift in Sources */,
 				D997B288202B74E5005A5104 /* Reusable+UICollectionView.swift in Sources */,
 				D997B287202B74E1005A5104 /* Reusable+UITableView.swift in Sources */,
 				D997B286202B74DE005A5104 /* Reusable.swift in Sources */,
