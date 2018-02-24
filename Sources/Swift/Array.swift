@@ -7,8 +7,12 @@
 //
 
 public extension Sequence {
-    func compactMap<T>() -> [T] where Element == T? {
-        return flatMap { $0 }
+    func compact<T>() -> [T] where Element == T? {
+        #if swift(>=4.1)
+            return compactMap { $0 }
+        #else
+            return flatMap { $0 }
+        #endif
     }
 }
 
