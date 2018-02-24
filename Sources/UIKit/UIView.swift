@@ -1,13 +1,13 @@
 //
 //  UIView.swift
-//  ExFoundation
+//  FoundationSupport
 //
 //  Created by 林達也 on 2018/02/08.
 //  Copyright © 2018年 林達也. All rights reserved.
 //
 
 import UIKit
-import ExFoundation
+import FoundationSupport
 
 public extension UIView {
     func addSubview(_ views: [UIView?]) {

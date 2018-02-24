@@ -1,6 +1,6 @@
 //
 //  NSRange.swift
-//  ExFoundation
+//  FoundationSupport
 //
 //  Created by 林達也 on 2017/12/25.
 //  Copyright © 2017年 林達也. All rights reserved.
