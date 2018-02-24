@@ -17,13 +17,19 @@ public extension Dictionary {
 }
 
 public extension Dictionary {
-    func compactValues<T>(_ transform: (Value) throws -> T?) rethrows -> [Key: T] {
-        return try reduce(into: [Key: T](minimumCapacity: underestimatedCount)) {
+    func mapKeys<NewKey: Hashable>(_ transform: (Key) throws -> NewKey) rethrows -> [NewKey: Value] {
+        return try reduce(into: [NewKey: Value](minimumCapacity: underestimatedCount)) {
+            $0[try transform($1.key)] = $1.value
+        }
+    }
+
+    func compactMapValues<NewValue>(_ transform: (Value) throws -> NewValue?) rethrows -> [Key: NewValue] {
+        return try reduce(into: [Key: NewValue](minimumCapacity: underestimatedCount)) {
             $0[$1.key] = try transform($1.value)
         }
     }
 
-    func compactValues<T>() -> [Key: T] where Value == T? {
-        return compactValues { $0 }
+    func compactValues<NewValue>() -> [Key: NewValue] where Value == NewValue? {
+        return compactMapValues { $0 }
     }
 }
