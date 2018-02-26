@@ -14,6 +14,12 @@ public extension Sequence {
             return flatMap { $0 }
         #endif
     }
+
+    #if !swift(>=4.1)
+    func compactMap<T>(_ transform: (Element) throws -> T?) rethrows -> [T] {
+        return try flatMap(transform)
+    }
+    #endif
 }
 
 public extension Sequence where Element == Bool {
