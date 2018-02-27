@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9093EA62045864300F60136 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9093EA52045864300F60136 /* UIAlertController.swift */; };
 		D91586C22041A54100A80DEC /* FoundationSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D91586C02041A54100A80DEC /* FoundationSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D91586D12041A75200A80DEC /* UIKitSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = D91586CF2041A75200A80DEC /* UIKitSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D91586E92041A79D00A80DEC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91586E52041A78200A80DEC /* Reusable.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D9093EA52045864300F60136 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		D91586BD2041A54100A80DEC /* FoundationSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91586C02041A54100A80DEC /* FoundationSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationSupport.h; sourceTree = "<group>"; };
 		D91586C12041A54100A80DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				D91586E22041A78200A80DEC /* UIView.swift */,
 				D91586E32041A78200A80DEC /* UIColor.swift */,
 				D91586E62041A78200A80DEC /* UILayoutPriority.swift */,
+				D9093EA52045864300F60136 /* UIAlertController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				D91586F32041A7C800A80DEC /* Array.swift in Sources */,
 				D91586F22041A7C400A80DEC /* NSRange.swift in Sources */,
 				D91586F42041A7C800A80DEC /* Equatable.swift in Sources */,
+				D9093EA62045864300F60136 /* UIAlertController.swift in Sources */,
 				D91586F12041A7C400A80DEC /* NSAttributedString.swift in Sources */,
 				D91586F52041A7C800A80DEC /* Dictionary.swift in Sources */,
 				D91586F62041A7C800A80DEC /* Bool.swift in Sources */,
