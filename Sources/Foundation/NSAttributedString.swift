@@ -65,7 +65,7 @@ extension NSAttributedString {
         case writingDirection([NSWritingDirection])
         case verticalGlyphForm(VerticalGlyphForm)
 
-        fileprivate var key: NSAttributedStringKey {
+        fileprivate var key: NSAttributedString.Key {
             switch self {
             case .font: return .font
             case .paragraphStyle: return .paragraphStyle

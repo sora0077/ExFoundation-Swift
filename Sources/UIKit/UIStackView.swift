@@ -10,10 +10,12 @@ import UIKit
 import FoundationSupport
 
 public extension UIStackView {
+    @nonobjc
     func addArrangedSubview(_ views: [UIView?]) {
         views.compact().forEach(addArrangedSubview)
     }
 
+    @nonobjc
     func addArrangedSubview(_ views: UIView?...) {
         addArrangedSubview(views)
     }

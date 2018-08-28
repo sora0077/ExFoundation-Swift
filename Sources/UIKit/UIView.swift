@@ -10,10 +10,12 @@ import UIKit
 import FoundationSupport
 
 public extension UIView {
+    @nonobjc
     func addSubview(_ views: [UIView?]) {
         views.compact().forEach(addSubview)
     }
 
+    @nonobjc
     func addSubview(_ views: UIView?...) {
         addSubview(views)
     }
