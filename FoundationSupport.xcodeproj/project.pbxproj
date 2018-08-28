@@ -75,8 +75,6 @@
 		D91586E62041A78200A80DEC /* UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
 		D91586E72041A78200A80DEC /* Reusable+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+UICollectionView.swift"; sourceTree = "<group>"; };
 		D91586E82041A78200A80DEC /* Reusable+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+UITableView.swift"; sourceTree = "<group>"; };
-		D91586FA2041A81800A80DEC /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		D91586FB2041A81800A80DEC /* shim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shim.h; sourceTree = "<group>"; };
 		D91587042041ADEB00A80DEC /* FoundationSupportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationSupportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91587082041ADEB00A80DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D915870F2044352400A80DEC /* EquatableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableTests.swift; sourceTree = "<group>"; };
@@ -204,18 +202,8 @@
 		D91586F82041A81800A80DEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D91586F92041A81800A80DEC /* CommonCrypto */,
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		D91586F92041A81800A80DEC /* CommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				D91586FA2041A81800A80DEC /* module.modulemap */,
-				D91586FB2041A81800A80DEC /* shim.h */,
-			);
-			path = CommonCrypto;
 			sourceTree = "<group>";
 		};
 		D91587052041ADEB00A80DEC /* FoundationSupportTests */ = {
