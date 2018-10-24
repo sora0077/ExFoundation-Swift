@@ -8,36 +8,40 @@
 
 public extension Sequence {
     func compact<T>() -> [T] where Element == T? {
-        #if swift(>=4.1)
-            return compactMap { $0 }
-        #else
-            return flatMap { $0 }
-        #endif
+        return compactMap { $0 }
     }
-
-    #if !swift(>=4.1)
-    func compactMap<T>(_ transform: (Element) throws -> T?) rethrows -> [T] {
-        return try flatMap(transform)
-    }
-    #endif
 }
 
 public extension Sequence where Element == Bool {
     func all() -> Bool {
-        return FoundationSupport.all(self)
+        return allSatisfy { $0 }
     }
 
     func any() -> Bool {
-        return FoundationSupport.any(self)
+        return contains(true)
     }
 }
 
 public extension Sequence {
-    func all(_ transform: (Element) throws -> Bool) rethrows -> Bool {
-        return try FoundationSupport.all(self, transform)
+    func all(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
+        return try allSatisfy(predicate)
     }
 
-    func any(_ transform: (Element) throws -> Bool) rethrows -> Bool {
-        return try FoundationSupport.any(self, transform)
+    func any(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
+        return try contains(where: predicate)
+    }
+}
+
+public extension Sequence {
+    func map<T>(_ keyPath: KeyPath<Element, T>) -> [T] {
+        return map { $0[keyPath: keyPath] }
+    }
+
+    func flatMap<T>(_ keyPath: KeyPath<Element, [T]>) -> [T] {
+        return flatMap { $0[keyPath: keyPath] }
+    }
+
+    func compactMap<T>(_ keyPath: KeyPath<Element, T?>) -> [T] {
+        return compactMap { $0[keyPath: keyPath] }
     }
 }
