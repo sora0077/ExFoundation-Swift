@@ -33,3 +33,17 @@ public extension Dictionary {
         return compactMapValues { $0 }
     }
 }
+
+public extension Dictionary {
+    func mapValues<NewValue>(_ keyPath: KeyPath<Value, NewValue>) -> [Key: NewValue] {
+        return mapValues { $0[keyPath: keyPath] }
+    }
+
+    func mapKeys<NewKey: Hashable>(_ keyPath: KeyPath<Key, NewKey>) -> [NewKey: Value] {
+        return mapKeys { $0[keyPath: keyPath] }
+    }
+
+    func compactMapValues<NewValue>(_ keyPath: KeyPath<Value, NewValue?>) -> [Key: NewValue] {
+        return compactMapValues { $0[keyPath: keyPath] }
+    }
+}

@@ -588,7 +588,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIKitSupport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.UIKitSupport;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -609,7 +608,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIKitSupport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.UIKitSupport;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -624,7 +622,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoundationSupportTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.FoundationSupportTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -638,7 +635,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoundationSupportTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.FoundationSupportTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
