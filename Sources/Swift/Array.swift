@@ -14,20 +14,20 @@ public extension Sequence {
 
 public extension Sequence where Element == Bool {
     func all() -> Bool {
-        return FoundationSupport.all(self)
+        return allSatisfy { $0 }
     }
 
     func any() -> Bool {
-        return FoundationSupport.any(self)
+        return contains(true)
     }
 }
 
 public extension Sequence {
-    func all(_ transform: (Element) throws -> Bool) rethrows -> Bool {
-        return try FoundationSupport.all(self, transform)
+    func all(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
+        return try allSatisfy(predicate)
     }
 
-    func any(_ transform: (Element) throws -> Bool) rethrows -> Bool {
-        return try FoundationSupport.any(self, transform)
+    func any(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
+        return try contains(where: predicate)
     }
 }
